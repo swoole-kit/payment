@@ -2,6 +2,7 @@
 
 
 namespace SwooleKit\Payment\Helpers\Crypto;
+use const null;
 
 /**
  * AES加解密操作类
@@ -47,5 +48,42 @@ class AesEncrypt
     const AES_128_XTS = 'AES-128-XTS';
     const AES_256_XTS = 'AES-256-XTS';
 
-    
+    private $key;
+    private $iv;
+    private $method;
+
+    /**
+     * AesEncrypt constructor.
+     * @param $key 密钥
+     * @param string $iv 初始向量
+     * @param string $method 加密算法
+     */
+    public function __construct($key,$iv='',$method='AES-128-CBC')
+    {
+        $this->key = $key;
+        $this->iv = $iv;
+        $this->method = $method;
+    }
+
+    /**
+     * 加密
+     * @param $data 待加密数据
+     * @param int $options
+     * @return string
+     */
+    public function encrypt($data,$options=1)
+    {
+        return openssl_encrypt($data, $this->method, $this->key, $options, $this->iv);
+    }
+
+    /**
+     * 解密
+     * @param $data 待解密数据
+     * @param int $options
+     * @return string
+     */
+    public function decrypt($data,$options=1)
+    {
+        return openssl_decrypt ($data, $this->method, $this->key, $options, $this->iv);
+    }
 }
