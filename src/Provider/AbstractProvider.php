@@ -11,6 +11,18 @@ use Exception;
  */
 abstract class AbstractProvider
 {
+
+    protected $paymentAccount;
+
+    /**
+     * AbstractProvider constructor.
+     * @param $account
+     */
+    public function __construct($account)
+    {
+        $this->paymentAccount = $account;
+    }
+
     /**
      * 发起一笔支付请求
      * @param string $channel 支付渠道
