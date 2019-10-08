@@ -9,5 +9,13 @@ namespace SwooleKit\Payment;
  */
 class Payment
 {
+    /**
+     * Payment constructor.
+     * @param string $provider
+     * @param $config
+     */
+    function __construct($provider, $config)
+    {
 
+    }
 }

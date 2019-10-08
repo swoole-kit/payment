@@ -30,7 +30,7 @@ class WeChatPayAccount extends SplBean
     /**
      * AppId Setter
      * @param mixed $appId
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setAppId($appId)
     {
@@ -50,7 +50,7 @@ class WeChatPayAccount extends SplBean
     /**
      * MchId Setter
      * @param mixed $mchId
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setMchId($mchId)
     {
@@ -70,7 +70,7 @@ class WeChatPayAccount extends SplBean
     /**
      * ApiKey Setter
      * @param mixed $apiKey
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setApiKey($apiKey)
     {
@@ -90,7 +90,7 @@ class WeChatPayAccount extends SplBean
     /**
      * ClientCert Setter
      * @param mixed $clientCert
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setClientCert($clientCert)
     {
@@ -110,7 +110,7 @@ class WeChatPayAccount extends SplBean
     /**
      * ClientKey Setter
      * @param mixed $clientKey
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setClientKey($clientKey)
     {
@@ -130,11 +130,12 @@ class WeChatPayAccount extends SplBean
     /**
      * IsSandbox Setter
      * @param bool $isSandbox
-     * @return WeChat
+     * @return WeChatPayAccount
      */
     public function setIsSandbox($isSandbox)
     {
         $this->isSandbox = $isSandbox;
         return $this;
     }
+
 }

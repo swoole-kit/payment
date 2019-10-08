@@ -30,7 +30,7 @@ class AliPayAccount extends SplBean
     /**
      * AppId Setter
      * @param mixed $appId
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setAppId($appId)
     {
@@ -50,7 +50,7 @@ class AliPayAccount extends SplBean
     /**
      * AppSecret Setter
      * @param mixed $appSecret
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setAppSecret($appSecret)
     {
@@ -70,7 +70,7 @@ class AliPayAccount extends SplBean
     /**
      * ServerCert Setter
      * @param mixed $serverCert
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setServerCert($serverCert)
     {
@@ -90,7 +90,7 @@ class AliPayAccount extends SplBean
     /**
      * ClientCert Setter
      * @param mixed $clientCert
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setClientCert($clientCert)
     {
@@ -110,7 +110,7 @@ class AliPayAccount extends SplBean
     /**
      * ClientCertKey Setter
      * @param mixed $clientCertKey
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setClientCertKey($clientCertKey)
     {
@@ -130,13 +130,12 @@ class AliPayAccount extends SplBean
     /**
      * IsSandbox Setter
      * @param bool $isSandbox
-     * @return AliPay
+     * @return AliPayAccount
      */
     public function setIsSandbox($isSandbox)
     {
         $this->isSandbox = $isSandbox;
         return $this;
     }
-
 
 }

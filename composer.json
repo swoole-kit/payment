@@ -8,6 +8,8 @@
         }
     ],
     "require": {
+        "php": ">=7.2",
+        "ext-openssl": "*",
         "easyswoole/component": "^1.9"
     },
     "autoload": {
